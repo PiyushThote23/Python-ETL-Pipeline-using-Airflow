@@ -107,7 +107,7 @@ default_args = {
 
 with DAG('redfin_analytics_dag',
         default_args=default_args,
-        schedule_interval = '@weekly',
+        schedule_interval = '@monthly',
         catchup=False) as dag:
 
         extract_redfin_data = PythonOperator(
